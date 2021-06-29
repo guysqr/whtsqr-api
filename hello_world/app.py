@@ -35,8 +35,15 @@ def lambda_handler(event, context):
 
     return {
         "statusCode": 200,
-        "body": json.dumps({
-            "message": "hello Whtsqr",
-            # "location": ip.text.replace("\n", "")
-        }),
+        "headers": {
+            "Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "OPTIONS,POST,HEAD,GET",
+        },
+        "body": json.dumps(
+            {
+                "message": "hello Whtsqr",
+                # "location": ip.text.replace("\n", "")
+            }
+        ),
     }
