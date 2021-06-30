@@ -42,7 +42,7 @@ def lambda_handler(event, context):
         },
         "body": json.dumps(
             {
-                "message": "Hello Whtsqr",
+                "message": "Hello Whtsqr!",
             }
         ),
     }
